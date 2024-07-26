@@ -95,8 +95,7 @@
   .form-row {
     display: block;
   }
-  .form-row .name,
-  .form-row .value {
+  .form-row .name, .form-row .value {
     display: block;
     width: 100%;
   }
