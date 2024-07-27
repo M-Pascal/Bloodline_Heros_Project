@@ -10,19 +10,19 @@
     
         <link href="{% static "css/main.css" %}"rel="stylesheet" media="all">
 </head>
-<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+<div class="page-wrapper p-t-45 p-b-50" style="background-image: url(../static/image/dash-1.jpg); background-size: cover; background-repeat: no-repeat;">
     <div class="wrapper wrapper--w790">
       
-        <div style="margin-left: 70px;" class="card card-5">
+        <div class="card card-5" style="margin-left: 70px; background-color: rgba(0, 0, 0, 0.4); border: 1px solid darkred; border-radius: 8px; min-width: 80%; font-family: league spartan;">
             <div class="card-heading">
-                <h2 class="title">MAKE BLOOD REQUEST</h2>
+                <h2 class="title">Make Blood Request</h2>
             </div>
             <div class="card-body">
                 <form method="POST" autocomplete="off" enctype="multipart/form-data">
                     {% csrf_token %}
 
                     <div class="form-row">
-                        <div class="name">Patient Name</div>
+                        <div class="name" style="font-size: 17px; color: black;">Patient Name</div>
                         <div class="value">
                             <div class="input-group">
                                 {% render_field request_form.patient_name|attr:'required:true'  class="input--style-5"  %}
@@ -31,7 +31,7 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="name">Patient Age</div>
+                        <div class="name" style="font-size: 17px; color: black;">Patient Age</div>
                         <div class="value">
                             <div class="input-group">
                                 {% render_field request_form.patient_age|attr:'required:true'  class="input--style-5"  %}
@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="name">Reason</div>
+                        <div class="name" style="font-size: 17px; color: black;">Reason</div>
                         <div class="value">
                             <div class="input-group">
                                 {% render_field request_form.reason|attr:'required:true'  class="input--style-5"  %}
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="name">Blood Group</div>
+                        <div class="name" style="font-size: 17px; color: black;">Blood Group</div>
                         <div class="value">
                             <div class="input-group">
                                 <div class="rs-select2 js-select-simple select--no-search">
@@ -71,7 +71,7 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="name">Unit (in ml)</div>
+                        <div class="name" style="font-size: 17px; color: black;">Unit (in 350-450ml)</div>
                         <div class="value">
                             <div class="input-group">
                                 {% render_field request_form.unit|attr:'required:true'  class="input--style-5"  %}

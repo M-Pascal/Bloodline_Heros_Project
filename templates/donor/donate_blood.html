@@ -10,10 +10,10 @@
     
         <link href="{% static "css/main.css" %}"rel="stylesheet" media="all">
 </head>
-<div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+<div class="page-wrapper p-t-45 p-b-50" style="background-image: url(../static/image/dash-2.WEBP); background-size: cover; background-repeat: no-repeat;">
     <div class="wrapper wrapper--w790">
       
-        <div style="margin-left: 70px;" class="card card-5">
+        <div class="card card-5" style="margin-left: 70px; background-color: rgba(0, 0, 0, 0.4); border: 1px solid darkred; border-radius: 8px; min-width: 80%; font-family: league spartan;">
             <div class="card-heading">
                 <h2 class="title">DONATE BLOOD</h2>
             </div>
@@ -22,7 +22,7 @@
                     {% csrf_token %}
 
                     <div class="form-row">
-                        <div class="name">Blood Group</div>
+                        <div class="name" style="font-size: 17px; color: black;">Blood Group</div>
                         <div class="value">
                             <div class="input-group">
                                 <div class="rs-select2 js-select-simple select--no-search">
@@ -44,7 +44,7 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="name">Unit (in ml)</div>
+                        <div class="name" style="font-size: 17px; color: black;">Unit (in 350-450ml)</div>
                         <div class="value">
                             <div class="input-group">
                                 {% render_field donation_form.unit|attr:'required:true'  class="input--style-5"  %}
@@ -53,7 +53,7 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="name">Disease (if any)</div>
+                        <div class="name" style="font-size: 17px; color: black;">Disease(if any)</div>
                         <div class="value">
                             <div class="input-group">
                                 {% render_field donation_form.disease|attr:'required:true'  class="input--style-5"  %}
@@ -62,7 +62,7 @@
                     </div>
 
                     <div class="form-row">
-                        <div class="name">Age</div>
+                        <div class="name" style="font-size: 17px; color: black;">Age</div>
                         <div class="value">
                             <div class="input-group">
                                 {% render_field donation_form.age|attr:'required:true'  class="input--style-5"  %}
@@ -73,7 +73,7 @@
 
 
                     <div>
-                        <button class="btn btn--radius-2 btn-danger" type="submit">DONATE</button>
+                        <button class="btn btn--radius-2 btn-danger" type="submit">Donate</button>
                     </div>
                 </form>
                 <br>

@@ -719,7 +719,7 @@ input {
 
 .card-5 .card-heading {
   padding: 20px 0;
-  background: #1a1a1a;
+  background: rgba(139, 0, 0, 0.7);
   -webkit-border-top-left-radius: 10px;
   -moz-border-radius-topleft: 10px;
   border-top-left-radius: 10px;
