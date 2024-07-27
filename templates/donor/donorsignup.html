@@ -24,11 +24,11 @@
 
 
 
-    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
-        <div class="wrapper wrapper--w790">
+    <div class="page-wrapper p-t-45 p-b-50" style="background-image: url(../static/image/back-2.jpg); background-size: cover; background-repeat: no-repeat;">
+        <div class="wrapper wrapper-w790" style="max-width: 50%;">
             <br><br><br>
-            <div class="card card-5">
-                <div class="card-heading">
+            <div class="card card-5" style="background-color: rgba(0, 0, 0, 0.4); border: 1px solid darkred; border-radius: 8px;">
+                <div class="card-heading" style="background-color: rgba(255, 0, 0, 0.8); border-radius: 8px 8px 0 0;">
                     <h2 class="title">Donor Signup</h2>
                 </div>
                 <div class="card-body">
@@ -36,7 +36,7 @@
                         {% csrf_token %}
 
                         <div class="form-row">
-                            <div class="name">First Name</div>
+                            <div class="name" style="font-size: 20px; color: black;">First Name</div>
                             <div class="value">
                                 <div class="input-group">
                                     {% render_field userForm.first_name|attr:'required:true'  class="input--style-5"  %}
@@ -45,7 +45,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="name">Last Name</div>
+                            <div class="name" style="font-size: 20px; color: black;">Last Name</div>
                             <div class="value">
                                 <div class="input-group">
                                     {% render_field userForm.last_name|attr:'required:true'  class="input--style-5"  %}
@@ -54,7 +54,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="name">Username</div>
+                            <div class="name" style="font-size: 20px; color: black;">Username</div>
                             <div class="value">
                                 <div class="input-group">
                                     {% render_field userForm.username|attr:'required:true'  class="input--style-5"  %}
@@ -63,7 +63,7 @@
                         </div>
   
                         <div class="form-row">
-                            <div class="name">Password</div>
+                            <div class="name" style="font-size: 20px; color: black;">Password</div>
                             <div class="value">
                                 <div class="input-group">
                                     {% render_field userForm.password|attr:'required:true'  class="input--style-5"  %}
@@ -76,7 +76,7 @@
 
 
                         <div class="form-row">
-                            <div class="name">Blood Group</div>
+                            <div class="name" style="font-size: 20px; color: black;">Blood Group</div>
                             <div class="value">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
@@ -100,7 +100,7 @@
 
 
                         <div class="form-row">
-                            <div class="name">Address</div>
+                            <div class="name" style="font-size: 20px; color: black;">Address</div>
                             <div class="value">
                                 <div class="input-group">
                                     {% render_field donorForm.address|attr:'required:true'  class="input--style-5"  %}
@@ -109,7 +109,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="name">Mobile</div>
+                            <div class="name" style="font-size: 20px; color: black;">Telephone</div>
                             <div class="value">
                                 <div class="input-group">
                                     {% render_field donorForm.mobile|attr:'required:true'  class="input--style-5"  %}
@@ -118,7 +118,7 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="name">Profile Pic</div>
+                            <div class="name" style="font-size: 20px; color: black;">Profile</div>
                             <div class="value">
                                 <div class="input-group">
                                     {% render_field donorForm.profile_pic|attr:'required:true'  class="input--style-5"  %}
@@ -133,7 +133,7 @@
                         </div>
                     </form>
                     <br>
-                    <p style="text-align: center;">Already have an account ? <a style="text-decoration: none;" href="/donor/donorlogin">Click here to login</a></p>
+                    <p style="text-align: center; color: black; font-weight: 400;">Already have an account ? <a style="text-decoration: none; color: darkblue;" href="/donor/donorlogin">Click here to login</a></p>
 
                 </div>
             </div>

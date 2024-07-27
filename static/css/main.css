@@ -1,22 +1,10 @@
 
-/* ==========================================================================
-   #FONT
-   ========================================================================== */
-.font-robo {
-  font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
-}
-
-.font-poppins {
-  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
-}
+/*Preset for custom bootstrap*/
 
 .font-opensans {
   font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
 }
 
-/* ==========================================================================
-   #GRID
-   ========================================================================== */
 .row {
   display: -webkit-box;
   display: -webkit-flex;
@@ -81,8 +69,10 @@
 .form-row .name {
   width: 125px;
   color: #555;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 700;
+  color: black;
+
 }
 
 .form-row .value {
@@ -170,10 +160,6 @@ html {
   box-sizing: inherit;
 }
 
-/* ==========================================================================
-   #RESET
-   ========================================================================== */
-
 body,
 h1, h2, h3, h4, h5, h6,
 blockquote, p, pre,
@@ -204,7 +190,6 @@ table {
 
 fieldset {
   min-width: 0;
-  /* [1] */
   border: 0;
 }
 
@@ -255,9 +240,7 @@ h6 {
   font-size: 13px;
 }
 
-/* ==========================================================================
-   #BACKGROUND
-   ========================================================================== */
+/* Backgorund backup for image-background*/
 .bg-blue {
   background: #2c6ed5;
 }
