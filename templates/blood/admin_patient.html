@@ -4,7 +4,7 @@
 {%load static%}
 <br><br>
 <div class="container">
-    <h4 class="text-center">PATIENT DETAILS</h4><br>
+    <H4 class="text-center">PATIENT DETAILS</H4><br>
     <table class="table table-light table-hover table-bordered table-striped">
         <thead class="bg-info">
             <tr>
@@ -13,7 +13,7 @@
                 <th scope="col">Blood Group</th>
                 <th scope="col">Age</th>
                 <th scope="col">Disease</th>
-                <th scope="col">Telephone</th>
+                <th scope="col">Mobile</th>
                 <th class="text-right">Action</th>
             </tr>
         </thead>
@@ -21,7 +21,7 @@
             {% for t in patients %}
             <tr>
                 <td> {{t.get_name}}</td>
-                <td> <img src="{% static t.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" style="border-radius: 20px;"/></td>
+                <td> <img src="{% static t.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
                 <td>{{t.bloodgroup}}</td>
                 <td>{{t.age}}</td>
                 <td>{{t.disease}}</td>
