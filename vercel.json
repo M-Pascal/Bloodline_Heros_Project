@@ -1,5 +1,5 @@
 
-/*
+
 {
   "version": 2,
   "builds": [
@@ -26,41 +26,5 @@
       "dest": "bloodbankmanagement/wsgi.py"
     }
   ]
-}  */
-
-
-
-{
-    "version": 2,
-    "builds": [
-      {
-        "src": "bloodbankmanagement/wsgi.py",
-        "use": "@vercel/python",
-        "config": {
-          "maxLambdaSize": "15mb",
-          "runtime": "python3.9"  // Ensure this matches your local development version.
-        }
-      },
-      {
-        "src": "build_files.sh",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "staticfiles_build"
-        }
-      }
-    ],
-    "routes": [
-      {
-        "src": "/static/(.*)",  // Ensure static files are properly routed.
-        "dest": "/static/$1"
-      },
-      {
-        "src": "/(.*)",  // Route all other requests to Django's WSGI entry point.
-        "dest": "bloodbankmanagement/wsgi.py"
-      }
-    ],
-    
-    "buildCommand": "bash build_files.sh"
-  }
-  
+}
 
