@@ -45,6 +45,11 @@ INSTALLED_APPS = [
     'patient',
 ]
 
+
+# Set default auto field for primary keys
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -81,8 +86,13 @@ WSGI_APPLICATION = 'bloodbankmanagement.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER' : 'postgres',
+        'PASSWORD' : 'Mugisha@2002',
+        'HOST' : 'localhost',
+        'PORT' : '5432',
+
     }
 }
 
