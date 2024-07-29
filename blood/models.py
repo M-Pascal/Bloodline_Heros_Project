@@ -2,12 +2,14 @@ from django.db import models
 from patient import models as pmodels
 from donor import models as dmodels
 class Stock(models.Model):
+    id = models.BigAutoField(primary_key=True)  # New way
     bloodgroup=models.CharField(max_length=10)
     unit=models.PositiveIntegerField(default=0)
     def __str__(self):
         return self.bloodgroup
 
 class BloodRequest(models.Model):
+    id = models.BigAutoField(primary_key=True)  # New way
     request_by_patient=models.ForeignKey(pmodels.Patient,null=True,on_delete=models.CASCADE)
     request_by_donor=models.ForeignKey(dmodels.Donor,null=True,on_delete=models.CASCADE)
     patient_name=models.CharField(max_length=30)
@@ -19,5 +21,8 @@ class BloodRequest(models.Model):
     date=models.DateField(auto_now=True)
     def __str__(self):
         return self.bloodgroup
+    
+
+#id = models.BigAutoField(primary_key=True)  # New way
 
         

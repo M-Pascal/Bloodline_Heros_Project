@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Donor(models.Model):
+    id = models.BigAutoField(primary_key=True)  # New way
     user=models.OneToOneField(User,on_delete=models.CASCADE)
     profile_pic= models.ImageField(upload_to='profile_pic/Donor/',null=True,blank=True)
 
@@ -22,6 +23,7 @@ class Donor(models.Model):
         return self.user.first_name
 
 class BloodDonate(models.Model): 
+    id = models.BigAutoField(primary_key=True)  # New way
     donor=models.ForeignKey(Donor,on_delete=models.CASCADE)   
     disease=models.CharField(max_length=100,default="Nothing")
     age=models.PositiveIntegerField()
