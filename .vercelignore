@@ -1,0 +1,8 @@
+myenv/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pdb
+#Ignore local database files
+*.sqlite3
