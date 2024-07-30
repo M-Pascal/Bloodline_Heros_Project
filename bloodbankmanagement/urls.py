@@ -13,10 +13,15 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from os import stat
+
+
 from django.contrib import admin
 from django.urls import path,include
 from django.contrib.auth.views import LogoutView,LoginView
 from blood import views
+from bloodbankmanagement import settings
+from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
 
@@ -49,5 +54,5 @@ urlpatterns = [
 ]
 
 
-urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += stat(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += stat(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
