@@ -1,10 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 class Donor(models.Model):
     id = models.BigAutoField(primary_key=True)  # New way
     user=models.OneToOneField(User,on_delete=models.CASCADE)
-    profile_pic= models.ImageField(upload_to='profile_pic/Donor/',null=True,blank=True)
+    profile_pic= CloudinaryField('image', folder='profile_pics')
+
 
     
     bloodgroup=models.CharField(max_length=10)

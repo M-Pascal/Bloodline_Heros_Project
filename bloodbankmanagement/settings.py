@@ -1,5 +1,11 @@
 import os
 from pathlib import Path
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+import dj_database_url
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -8,12 +14,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+zy!9k=9pql5gz9bkqjore)k6r!%w0atk(@(!(!zvp5e(t2i8n'
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -28,6 +34,7 @@ INSTALLED_APPS = [
     'blood',
     'donor',
     'patient',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -65,11 +72,10 @@ WSGI_APPLICATION = 'bloodbankmanagement.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+DATABASE_URL = str(os.getenv('DATABASE_URL'))
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=600)
 }
 
 # Password validation
@@ -121,3 +127,11 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'from@gmail.com'  # this email will be used to send emails
 EMAIL_HOST_PASSWORD = 'xyz'  # host email password required
 EMAIL_RECEIVING_USER = ['to@gmail.com']
+
+
+# Cloudinary settings
+cloudinary.config(
+      cloud_name = str(os.getenv('CLOUD_NAME')),
+      api_key = str(os.getenv('API_KEY')),
+      api_secret = str(os.getenv('API_SECRET')),
+   )
